@@ -1,0 +1,7 @@
+c25bfc96-a63f-44e2-98d4-47762c2270ff|depinds|2025-05-21||cornflowerblue|cornflowerblue|white|cadaro|11:53:58|2025-05-05|1
+b8933178-dac9-4e50-ada6-1a5c8134e724|depends nilang apol|2025-05-20||cornflowerblue|cornflowerblue|white|JOHN PEREZ CADARO|13:43:15|2025-05-07|1
+a6a6ea49-fe8d-4cf5-b5bd-97c81453cfa2|jason depends|2025-05-13|2025-05-15|cornflowerblue|cornflowerblue|white|JOHN PEREZ CADARO|13:43:42|2025-05-07|1
+bda48e6b-83c7-4f6c-8f0a-884f4d3e66bb|switching day|2025-05-15||cornflowerblue|cornflowerblue|white|JOHN PEREZ CADARO|14:08:17|2025-05-13|1
+271348fa-9307-4a55-a56f-5d4d6ad76243|switching day|2025-05-17||cornflowerblue|cornflowerblue|white|JOHN PEREZ CADARO|14:08:19|2025-05-13|1
+87a25995-f6ce-4868-b1c8-e0ecbb31033b|dipinded|2025-05-21||cornflowerblue|cornflowerblue|white|JOHN PEREZ CADARO|14:08:39|2025-05-13|1
+5b1234ce-c68f-4a01-906e-cf8c0d12312e|HM day's|2025-05-16||cornflowerblue|cornflowerblue|white|Unknown User|17:01:53|2025-05-14|1

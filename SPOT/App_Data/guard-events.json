@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Guard A",
+    "day": "Monday",
+    "time": "08:00 - 16:00"
+  },
+  {
+    "name": "Guard B",
+    "day": "Tuesday",
+    "time": "16:00 - 00:00"
+  }
+]

@@ -1,0 +1,96 @@
+﻿.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-section {
+    width: 48%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-fields, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+    .input-fields.valid-driver {
+        border: 2px solid #4CAF50;
+    }
+
+    .input-fields.invalid-driver {
+        border: 2px solid #f44336;
+    }
+
+.vehicle-Color {
+    margin-bottom: 15px;
+}
+
+    .vehicle-Color .flex {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .vehicle-Color input[type="color"] {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+    }
+
+    .vehicle-Color select {
+        width: 120px;
+    }
+
+    .vehicle-Color #colorPreview {
+        height: 30px;
+        border-radius: 4px;
+    }
+
+label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+    .btn-primary:hover {
+        background-color: #45a049;
+    }
+
+    .btn-primary:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+.clear-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .clear-button:hover {
+        background-color: #d32f2f;
+    }

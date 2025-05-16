@@ -1,0 +1,48 @@
+﻿table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule-box {
+    width: 50px; /* ⬆ Increase width */
+    height: 50px; /* ⬆ Increase height */
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* ⬆ Allow multiple events */
+    overflow: auto;
+}
+
+.event {
+    background-color: #007bff;
+    color: white;
+    padding: 3px;
+    font-size: 10px; /* ⬇ Reduce text size */
+    margin: 2px;
+    border-radius: 4px;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+    .schedule-box:hover {
+        background-color: lightblue;
+    }
+
+
+.selected {
+    background-color: rgba(0, 123, 255, 0.5); /* Highlight selected cells */
+    border: 2px solid #007bff;
+}

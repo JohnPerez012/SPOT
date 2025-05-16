@@ -1,0 +1,439 @@
+﻿/* Lock Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1002;
+}
+
+    .card h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .card input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+.unlock-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.unlock-btn:hover {
+    background-color: #218838;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dropdown-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: black;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+    .dropdown-icon:hover {
+        background: #0056b3;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: 47px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.logout-btn, .lock-btn {
+    position: static;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.logout-btn {
+    background: red;
+    color: white;
+}
+
+    .logout-btn:hover {
+        background: darkred;
+    }
+
+.lock-btn {
+    background: #007bff;
+    color: white;
+}
+
+    .lock-btn:hover {
+        background: #0056b3;
+    }
+
+/* Pending Circles */
+.pending-circles-container {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 3px;
+}
+
+.circle {
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+    .circle.green {
+        background-color: green;
+    }
+
+/* Inactivity Notification */
+.inactive-notification {
+    text-align: center;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4f4f;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: 16px;
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+    .inactive-notification.show {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+#inactiveText {
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Blurred Background Overlay */
+.lockBlurProtection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    z-index: 1001;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    cursor: not-allowed;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Center "Hello" */
+.hello-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Date-Time */
+.date-time {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+/* Profile Icon */
+.profile {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Notification Icon */
+.notification-icon {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Sidebar */
+.sidebar {
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    padding: 10px;
+}
+
+    .sidebar.hidden {
+        display: none;
+    }
+
+    .sidebar a {
+        color: black;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        margin: 8px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(2, 2, 2, 0.1);
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        transform: translateX(-35%);
+        transition: background 0.3s, transform 0.2s;
+    }
+
+        .sidebar a:hover {
+            transition: 0.2s;
+            background: rgb(0, 208, 255);
+            color: white;
+            transform: translate(-50px);
+        }
+
+/* Centered Dashboard */
+.dashboard-container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dashboard Boxes */
+.box {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+    .box:hover {
+        background: #007bff;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(10, 5, 1, 0.2);
+        transform: scale(1.05);
+        border-radius: 15px;
+    }
+
+/* Overlay for Blurring */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+    .overlay.active {
+        display: block;
+    }
+
+/* Pop-up Container */
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+    .popup.show {
+        display: block;
+    }
+
+/* Pop-up Frame */
+.popup-frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+    .close-btn:hover {
+        background: red;
+        color: white;
+    }

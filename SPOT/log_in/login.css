@@ -1,0 +1,334 @@
+﻿
+
+
+
+
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(270deg, #001f3f, #0056b3, #00aaff);
+    background-position: 100%;
+    background-size: 400% 400%;
+    animation: neonBg 10s infinite alternate ease-in-out;
+    margin: 0;
+    /*    color: white;*/
+}
+
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 850px;
+    height: 450px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideIn 2.5s ease-out forwards;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 174, 255, 0.8);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Side - Logo */
+.logo-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+    /* Neon Glowing Background */
+    .logo-box::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(0, 174, 255, 0.6) 20%, rgba(0, 174, 255, 0) 70%);
+        filter: blur(30px);
+        z-index: -1;
+        animation: glowPulse 1s infinite alternate ease-in-out;
+    }
+
+@keyframes glowPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0.2;
+    }
+}
+
+.logo-box::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    animation: neonOutlineMove 1s linear infinite;
+}
+
+
+@keyframes neonOutlineMove {
+    0% {
+        border-image: linear-gradient(0deg, transparent 50%, rgba(0, 174, 255, 0.8) 100%) 1;
+    }
+
+    25% {
+        border-image: linear-gradient(90deg, transparent 50%, rgba(0, 174, 255, 0.8) 100%) 1;
+    }
+
+    50% {
+        border-image: linear-gradient(180deg, transparent 50%, rgba(0, 174, 255, 0.8) 100%) 1;
+    }
+
+    75% {
+        border-image: linear-gradient(270deg, transparent 50%, rgba(0, 174, 255, 0.8) 100%) 1;
+    }
+
+    100% {
+        border-image: linear-gradient(360deg, transparent 50%, rgba(0, 174, 255, 0.8) 100%) 1;
+    }
+}
+
+
+.logo-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    position: relative;
+    animation: float 3s infinite ease-in-out;
+    filter: drop-shadow(0px 0px 10px rgba(0, 174, 255, 0.8));
+}
+
+
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-28px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.login-box {
+    flex: 1;
+    background: rgba(0, 174, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-left: 5px solid rgba(0, 174, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 174, 255, 0.5);
+    border-radius: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 174, 255, 0.5);
+    border: 0.5px solid #ccc;
+    background: rgba(0, 174, 255, 0.1);
+    color: white;
+    text-align: left;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+    .input-field:focus {
+        outline: none;
+        box-shadow: 0px 0px 10px rgba(0, 174, 255, 0.9);
+    }
+
+
+.btnLogin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all child elements horizontally */
+    text-align: center;
+}
+
+.login-btn {
+    background: linear-gradient(45deg, #003366, #0056b3, #00aaff);
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .login-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 174, 255, 0.8);
+    }
+
+    .login-btn:active {
+        transform: scale(0.95);
+    }
+
+
+
+.clock-cont {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    transform: translateY(-80px);
+    animation: clockslideIn 2.5s ease-out forwards;
+}
+
+/* Slide-in Animation */
+@keyframes clockslideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-165px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-80px);
+    }
+}
+
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+}
+
+.time {
+    letter-spacing: 0.05em;
+    font-size: 50px;
+    padding: 5px 0;
+}
+
+.date {
+    margin-bottom: -35px;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px; /* Adds spacing between rows */
+}
+
+.digit-box, .pin-box {
+    width: 50px;
+    height: 60px;
+    font-size: 26px;
+    text-align: center;
+    border: 2px solid white;
+    background: #003366;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+.pin-box {
+    -webkit-text-security: disc; /* Makes text appear as dots */
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    color: white;
+}
+
+.button-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.toggle-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .toggle-btn:hover {
+        background: #0056b3;
+    }
+
+.login-btn {
+    margin-left: auto; /* Pushes login button to the end */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+﻿/* General Styling */
+@import url(https://fonts.googleapis.com/css?family=Geo);
+
+body {
+    text-align: center;
+    font-family:system-ui;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 145vh;
+    margin: 0;
+    background: #333333;
+}
+
+/* Full Page Centering */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 140vh; /* Ensures vertical centering */
+    width: 100%;
+}
+
+/* Container for the form */
+.container {
+    background: #222529;
+    border-bottom-left-radius: 90px 90px;
+    border-top-right-radius: 90px 90px;
+    box-shadow: 0px 20px 25px #9ac0ff;
+    width: 500px;
+    max-width: 90%; /* Prevents overflow on smaller screens */
+    text-align: center;
+    padding: 30px 30px;
+    font-family: system-ui;
+    color: white;
+    // 🔥 Add animated border properties --border-angle: 0turn;
+    --main-bg: conic-gradient( from var(--border-angle), #222529, #1a1e23 5%, #1a1e23 60%, #222529 95% );
+    --gradient-border: conic-gradient( from var(--border-angle), transparent 25%, #00b8b6, #00fffc 99%, transparent );
+    border: 5px solid transparent;
+    border-radius: 2em;
+    background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+    background-position: center center;
+    animation: bg-spin 3s linear infinite;
+}
+
+/* Form Title */
+h2 {
+    text-align: center;
+    font-family: system-ui;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left; /* Align labels to left */
+    color: white;
+}
+
+/* Input Fields */
+.input-field,
+textarea,
+select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: white;
+    border-color: #9ac0ff;
+    color: black;
+}
+
+/* Textarea */
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Buttons */
+button, .btn-primary {
+    width: 100px;
+    height: 50px;
+    background: #333333;
+    font-family: system-ui;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    border-color: #333333;
+    box-shadow: 0px 0px 0px #9ac0ff;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin: 10px 10px;
+}
+
+
+/* Pop-up Modal */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+}
+
+.modal-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Button Styling for Pop-up */
+.modal-container button {
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .modal-container button:hover {
+        background: #0056b3;
+    }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 10px) {
+    .container {
+        width: 10%;
+    }
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
