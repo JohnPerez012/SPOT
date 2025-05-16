@@ -11,7 +11,7 @@
 
 
 
-         function () {
+         function updateTime() {
              const now = new Date();
              const options = {
                  //weekday: 'long',
